@@ -11,7 +11,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 #APIインスタンスを作成
 api = tweepy.API(auth,wait_on_rate_limit=True)#wait_on_rate_limit=True。これを指定するとAPIの使用制限にひかかったときに待ちます。
 
-search_results = api.search(q= "橋本ありな", count=100,lang="ja")
+search_results = api.search(q= "橋本ありな", count=10,lang="ja")
 
 for result in search_results:
     username = result.user._json['screen_name']
